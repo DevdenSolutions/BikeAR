@@ -62,6 +62,10 @@ model-viewer {
     border: 3px  #7EC8E3;
   }
   
+  button[slot="hotspot-hand"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
 
   
   
