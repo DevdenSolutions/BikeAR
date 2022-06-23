@@ -105,6 +105,29 @@ model-viewer {
     padding: 10px;
   }
 
+  #annotation2{
+    background-color: #fff;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #annotation3{
+    background-color: #fff;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #annotation4{
+    background-color: #fff;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
 footer {
   display: flex;
   flex-direction: column;

@@ -68,12 +68,18 @@
   <div id="check">    
 	<label for="show-text">Seat Annotations</label>
     <input id="show-text" type="checkbox">
+	<label for="show-text2">Rack Annotations</label>
+    <input id="show-text2" type="checkbox">
+	<label for="show-text3">Motor Annotations</label>
+    <input id="show-text3" type="checkbox">
+	<label for="show-text4">Tyre Annotations</label>
+    <input id="show-text4" type="checkbox">
   </div>
-    
-	<button class="Hotspot" id ="anectode" slot="hotspot-1" data-position="-0.07367156476337364m 0.9886403216925633m 0.4049407572680128m" data-normal="-0.9444171793563713m 0.04242330251235066m -0.3260006974540106m" data-visibility-attribute="visible"> <div id="annotation">"Equipped&nbsp;with&nbsp;a&nbsp;telescoping&nbsp;seatpost&nbsp;with&nbsp;a&nbsp;375mm&nbsp;maximum&nbsp;length&nbsp;that's&nbsp;capable&nbsp;of&nbsp;accommodating&nbsp;riders&nbsp;between&nbsp;5'1"&nbsp;-&nbsp;6'4"."</div></button>
-    <button class="Hotspot" id ="anectode" slot="hotspot-2" data-position="-0.08946175502646984m 0.7417332907683247m 1.18852202845206m" data-normal="-0.9503953625041406m -0.11513625542779583m 0.28895033763034195m" data-visibility-attribute="visible"><div id="annotation2">"Attach&nbsp;bags,baskets,passenger&nbsp;seats&nbsp;or&nbsp;simply&nbsp;strap&nbsp;on&nbsp;bulky&nbsp;items&nbsp;-&nbsp;the&nbsp;extended&nbsp;size&nbsp;and&nbsp;integrated&nbsp;rack&nbsp;make&nbsp;hauling&nbsp;a&nbsp;cinch."</div></button>
-	<button class="Hotspot" id ="anectode" slot="hotspot-3" data-position="0.04101679710261287m 0.5584075583623769m 0.030592924300133717m" data-normal="1m 0m 0m" data-visibility-attribute="visible"> <div id="annotation3">"Climb&nbsp;hills&nbsp;and&nbsp;zip&nbsp;across&nbsp;intersections&nbsp;powered&nbsp;by&nbsp;our&nbsp;Rad-engineered&nbsp;750W&nbsp;motor,designed&nbsp;in-house&nbsp;to&nbsp;help&nbsp;you&nbsp;go&nbsp;steeper&nbsp;at&nbsp;lower&nbsp;speeds."</div></button>
-    <button class="Hotspot" id ="anectode" slot="hotspot-4" data-position="0.03506024661472849m 0.5204296493532095m -0.8120204608073687m" data-normal="0.9907842717267029m 0.07769052305014007m -0.11095363683621581m" data-visibility-attribute="visible"><div id="annotation4">"The 22" x 3" tires, designed in-house by Rad engineers, feature a custom tread pattern for smoother riding on uneven surfaces, and an overall size that provides a lower center of gravity."</div></button>   
+  
+    <button class="Hotspot" id ="anectode" slot="hotspot-7" data-position="-0.07367156476337364m 0.9886403216925633m 0.4049407572680128m" data-normal="-0.9444171793563713m 0.04242330251235066m -0.3260006974540106m"> <div id="annotation"></div></button>
+    <button class="Hotspot" id ="anectode2" slot="hotspot-7" data-position="-0.08946175502646984m 0.7417332907683247m 1.18852202845206m" data-normal="-0.9503953625041406m -0.11513625542779583m 0.28895033763034195m"> <div id="annotation2"></div></button>
+    <button class="Hotspot" id ="anectode3" slot="hotspot-7"data-position="0.04101679710261287m 0.5584075583623769m 0.030592924300133717m" data-normal="1m 0m 0m"> <div id="annotation3"></div></button>
+    <button class="Hotspot" id ="anectode4" slot="hotspot-7" data-position="0.03506024661472849m 0.5204296493532095m -0.8120204608073687m" data-normal="0.9907842717267029m 0.07769052305014007m -0.11095363683621581m"> <div id="annotation4"></div></button>
     <!-- <button class="Hotspot" id ="anectode" slot="hotspot-2" data-position="0.1571773503677714m 0.34811380176846585m -0.18072995252219695m" data-normal="-0.019020629202478517m 0.08753284292171645m 0.9959800284517678m" data-visibility-attribute="visible"><div id="annotation">Brown Chair</div></button> -->
 	<div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
@@ -89,12 +95,22 @@
   const div4 = document.getElementById('annotation4');
   
   	const checkbox = modelViewer.querySelector('#show-text');
+	const checkbox2= modelViewer.querySelector('#show-text2');
+	const checkbox3= modelViewer.querySelector('#show-text3');
+	const checkbox4= modelViewer.querySelector('#show-text4');
 	
     checkbox.addEventListener('change', () => {
     
       if (checkbox.checked) {
+		div.innerHTML = "Equipped&nbsp;with&nbsp;a&nbsp;telescoping&nbsp;seatpost&nbsp; with&nbsp;a&nbsp;375mm&nbsp;maximum&nbsp;length&nbsp; that's&nbsp;capable&nbsp;of&nbsp;accommodating&nbsp; riders&nbsp;between&nbsp;5'1&#8221;-&nbsp;6'4&#8243;.";
          document.getElementById("anectode").classList.remove('hide');
-		
+		 
+		checkbox2.checked = false;
+		document.getElementById("anectode2").classList.add('hide');
+		checkbox3.checked = false;
+		document.getElementById("anectode3").classList.add('hide');
+		checkbox4.checked = false;
+		document.getElementById("anectode4").classList.add('hide');
 		 console.log(checkbox.checked);
 		
       } else {
@@ -104,7 +120,72 @@
     
   });
 	
-	  
+	checkbox2.addEventListener('change', () => {
+    
+      if (checkbox2.checked) {
+	   div2.innerHTML = "Attach&nbsp;bags,baskets,passenger&nbsp;seats&nbsp; or&nbsp;simply&nbsp;strap&nbsp;on&nbsp;bulky&nbsp;items &nbsp;-&nbsp;the&nbsp;extended&nbsp;size&nbsp;and&nbsp;integrated&nbsp;rack&nbsp; make&nbsp;hauling&nbsp;a&nbsp;cinch.";
+         document.getElementById("anectode2").classList.remove('hide');
+		
+		checkbox.checked = false;
+		document.getElementById("anectode").classList.add('hide');
+		checkbox3.checked = false;
+		document.getElementById("anectode3").classList.add('hide');
+		checkbox4.checked = false;
+		document.getElementById("anectode4").classList.add('hide');
+		console.log(checkbox.checked);
+		 
+		
+      } else {
+		 document.getElementById("anectode2").classList.add('hide');
+		 console.log(checkbox.checked);
+      }
+    
+  });
+  
+	  checkbox3.addEventListener('change', () => {
+		
+		  if (checkbox3.checked) {
+		   div3.innerHTML = "Climb&nbsp;hills&nbsp;and&nbsp;zip&nbsp;across&nbsp;intersections&nbsp;powered&nbsp;by&nbsp;our&nbsp; Rad-engineered&nbsp;750W&nbsp;motor,designed&nbsp;in-house&nbsp;to&nbsp;help&nbsp;you&nbsp;go&nbsp;steeper&nbsp;at&nbsp;lower&nbsp;speeds.";
+		   document.getElementById("anectode3").classList.remove('hide');
+			
+			checkbox.checked = false;
+			document.getElementById("anectode").classList.add('hide');
+			checkbox2.checked = false;
+		    document.getElementById("anectode2").classList.add('hide');
+			checkbox4.checked = false;
+		    document.getElementById("anectode4").classList.add('hide');
+			console.log(checkbox.checked);
+			 
+			
+		  } else {
+			 document.getElementById("anectode3").classList.add('hide');
+			 console.log(checkbox.checked);
+		  }
+		
+	  });
+	
+	 checkbox4.addEventListener('change', () => {
+		
+		  if (checkbox4.checked) {
+		   div4.innerHTML = "The&nbsp;22&nbsp;x&nbsp;3&nbsp;tires,designed&nbsp;in-house&nbsp;by&nbsp;Rad&nbsp;engineers,&nbsp;feature&nbsp;a&nbsp;custom&nbsp;tread&nbsp;pattern&nbsp;for&nbsp;smoother&nbsp;riding&nbsp;on&nbsp;uneven&nbsp;surfaces, and&nbsp;an&nbsp;overall&nbsp;size&nbsp;that&nbsp;provides&nbsp;a&nbsp;lower&nbsp;center&nbsp;of&nbsp;gravity.";
+			document.getElementById("anectode4").classList.remove('hide');
+			
+			checkbox.checked = false;
+			document.getElementById("anectode").classList.add('hide');
+			checkbox2.checked = false;
+		    document.getElementById("anectode2").classList.add('hide');
+			checkbox3.checked = false;
+		    document.getElementById("anectode3").classList.add('hide');
+			console.log(checkbox.checked);
+			 
+			
+		  } else {
+			 document.getElementById("anectode4").classList.add('hide');
+			 console.log(checkbox.checked);
+		  }
+		
+	  });
+	
 	var colorValues="Green,Red,Pink";
     var productName = "Sofa";
   
