@@ -65,7 +65,8 @@
     </select><br>-->
 	
   
-  <div id="check">   
+  <div id="check"> 
+	<label> Annotations </label><br>  
     <input id="show-text" type="checkbox">  
 	<label for="show-text">Telescoping seatpost</label>
 	<br>
@@ -88,7 +89,6 @@
 	<div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
-	
 </model-viewer>
 
 <script type="module">
@@ -103,11 +103,17 @@
 	const checkbox3= modelViewer.querySelector('#show-text3');
 	const checkbox4= modelViewer.querySelector('#show-text4');
 	
+	
+	
     checkbox.addEventListener('change', () => {
     
       if (checkbox.checked) {
 		div.innerHTML = "Equipped&nbsp;with&nbsp;a&nbsp;telescoping&nbsp;seatpost&nbsp; with&nbsp;a&nbsp;375mm&nbsp;maximum&nbsp;length&nbsp; that's&nbsp;capable&nbsp;of&nbsp;accommodating&nbsp; riders&nbsp;between&nbsp;5'1&#8221;-&nbsp;6'4&#8243;.";
-         document.getElementById("anectode").classList.remove('hide');
+        
+		document.getElementById('anectode').style.backgroundColor = '#7EC8E3';
+		div.style.backgroundColor = '#fff';
+		
+		document.getElementById("anectode").classList.remove('hide');
 		 
 		checkbox2.checked = false;
 		document.getElementById("anectode2").classList.add('hide');
@@ -128,7 +134,11 @@
     
       if (checkbox2.checked) {
 	   div2.innerHTML = "Attach&nbsp;bags,baskets,passenger&nbsp;seats&nbsp; or&nbsp;simply&nbsp;strap&nbsp;on&nbsp;bulky&nbsp;items &nbsp;-&nbsp;the&nbsp;extended&nbsp;size&nbsp;and&nbsp;integrated&nbsp;rack&nbsp; make&nbsp;hauling&nbsp;a&nbsp;cinch.";
-         document.getElementById("anectode2").classList.remove('hide');
+         
+		document.getElementById('anectode2').style.backgroundColor = '#7EC8E3';
+		div2.style.backgroundColor = '#fff';
+		 
+		 document.getElementById("anectode2").classList.remove('hide');
 		
 		checkbox.checked = false;
 		document.getElementById("anectode").classList.add('hide');
@@ -150,6 +160,10 @@
 		
 		  if (checkbox3.checked) {
 		   div3.innerHTML = "Climb&nbsp;hills&nbsp;and&nbsp;zip&nbsp;across&nbsp;intersections&nbsp; powered&nbsp;by&nbsp;our&nbsp;Rad-engineered&nbsp; 750W&nbsp;motor,designed&nbsp;in-house&nbsp;to&nbsp; help&nbsp;you&nbsp;go&nbsp;steeper&nbsp;at&nbsp;lower&nbsp;speeds.";
+		   
+		   document.getElementById('anectode3').style.backgroundColor = '#7EC8E3';
+		   div3.style.backgroundColor = '#fff';
+		   
 		   document.getElementById("anectode3").classList.remove('hide');
 			
 			checkbox.checked = false;
@@ -172,6 +186,10 @@
 		
 		  if (checkbox4.checked) {
 		   div4.innerHTML = "The&nbsp;22&#8243;&nbsp;x&nbsp;3&#8243;&nbsp;tires,designed&nbsp;in-house&nbsp; by&nbsp;Rad&nbsp;engineers,&nbsp;feature&nbsp;a&nbsp;custom&nbsp; tread&nbsp;pattern&nbsp;for&nbsp;smoother&nbsp;riding&nbsp; on&nbsp;uneven&nbsp;surfaces,and&nbsp;an&nbsp;overall&nbsp;size&nbsp; that&nbsp;provides&nbsp;a&nbsp;lower&nbsp;center&nbsp;of&nbsp;gravity.";
+			
+			document.getElementById('anectode4').style.backgroundColor = '#7EC8E3';
+		    div4.style.backgroundColor = '#fff';
+			
 			document.getElementById("anectode4").classList.remove('hide');
 			
 			checkbox.checked = false;

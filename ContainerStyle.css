@@ -52,7 +52,7 @@ model-viewer {
     height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #7EC8E3;
+    background-color: transparent;
     box-sizing: border-box;
   }
   #anectode2{
@@ -61,7 +61,7 @@ model-viewer {
     height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #7EC8E3;
+    background-color: transparent;
     box-sizing: border-box;
   }
    
@@ -71,7 +71,7 @@ model-viewer {
     height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #7EC8E3;
+    background-color: transparent;
     box-sizing: border-box;
   }
 	#anectode4{
@@ -80,7 +80,7 @@ model-viewer {
     height: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #7EC8E3;
+    background-color: transparent;
     box-sizing: border-box;
   }
 	
@@ -98,7 +98,7 @@ model-viewer {
   
   
  #annotation{
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     transform: translate(10px, 10px);
     border-radius: 10px;
@@ -106,7 +106,7 @@ model-viewer {
   }
 
   #annotation2{
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     transform: translate(10px, 10px);
     border-radius: 10px;
@@ -114,7 +114,7 @@ model-viewer {
   }
   
   #annotation3{
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     transform: translate(10px, 10px);
     border-radius: 10px;
@@ -122,7 +122,7 @@ model-viewer {
   }
   
   #annotation4{
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
     transform: translate(10px, 10px);
     border-radius: 10px;
